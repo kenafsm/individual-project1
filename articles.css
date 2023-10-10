@@ -1,0 +1,149 @@
+/* Page Layout */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C3E0E5;
+}
+
+/* Navigation Bar Styling */
+header {
+    padding: 20px 100px;
+    background-color: #5885AF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    position: relative;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h1 {
+    font-style: italic;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Articles List Styling */
+.wrapper {
+    margin: 100px auto;
+    width: 70%;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    float: left;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.text-box {
+    color: black;
+}
+
+.text-box h2 a {
+    font-size: 42px;
+    text-decoration: none;
+    text-align: justify;
+}
+
+.text-box p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Footer Styling */
+footer {
+    padding: 20px 100px;
+    background-color: #274472;
+    color: white;
+    text-align: center;
+}
+
+
+
+/* Media query for mobile phones */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 10px;
+    }
+    
+    .navbar a {
+        margin-left: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .text-box h2 a {
+        font-size: 28px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

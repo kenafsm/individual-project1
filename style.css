@@ -1,0 +1,400 @@
+/* Page Layout */
+* {
+    margin : 0;
+    padding: 0;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #C3E0E5;
+}
+
+/* Navigation Bar Styling */
+header {
+    padding: 20px 100px;
+    background-color: #5885AF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    position: relative;
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; 
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+}
+
+
+h1 {
+    font-style: italic;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Brief Description for Web Introduction and Gallery Description */
+#briefdesc {
+    color: white;
+    text-align: center;
+    overflow: hidden; 
+    white-space: nowrap; 
+    font-size: 24px;
+    animation: typing 3s steps(78) 1s forwards;
+}
+
+#briefdesc2 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+    margin: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(95) 1s forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Hero Content or Main Display */
+#toparticles {
+    display: block;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.hero {
+    background-color: #5885AF;
+    background-image: url(/assets/intotsv.png);
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-wrap: wrap;
+    }
+}
+
+/* Top Articles Cards */
+.card {
+    background: white;
+    width: 270px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.card-image {
+    background-color: white;
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.pict-1 {
+    background-image: url(/assets/iot.webp);
+}
+.pict-2 {
+    background-image: url(/assets/semantic.png);
+}
+.pict-3 {
+    background-image: url(/assets/bootstrap-vs-tailwind.webp);
+}
+.pict-4 {
+    background-image: url(/assets/threatsofai.jpeg);
+}
+
+.card h2, .card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: #274472;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+/* Gallery Styling including picture slider with radio button as manual navigation button */
+#gallery {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+.slider {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #41729F;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+
+/* Comment Form Styling */
+form {
+    padding: 100px;
+    background-color: #41729F;
+    color: white;
+    position: relative;
+}
+
+form input, form textarea {
+    border: none;
+    outline: none;
+    width: 500px;
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #C3E0E5;
+}
+
+form textarea {
+    resize: none;
+    height: 220px;
+}
+
+form .send {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #274472;
+    color: white;
+    width: 190px;
+    transition: all .40s ease;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    padding: 20px 100px;
+    background-color: #274472;
+    color: white;
+    text-align: center;
+}
+
+
+/* media query for mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+    
+    .navbar a {
+        margin-left: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    #briefdesc,
+    #briefdesc2 {
+        font-size: 15px;
+        margin: 10px;
+        animation: none; /* Disable the typing animation on mobile */
+        border: none;
+    }
+
+    #toparticles {
+        font-size: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        font-size: 16px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card h2,
+    .card p {
+        text-align: left;
+    }
+
+    .card a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .slides {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navigation-manual {
+        width: 100%;
+    }
+
+    .manual-btn {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 40px;
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
