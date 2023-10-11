@@ -104,7 +104,7 @@ svg {
 
 .hero {
     background-color: #5885AF;
-    background-image: url(/assets/intotsv.png);
+    background-image: url(assets/intotsv.png);
     background-size: cover;
     background-position: center;
     padding: 150px;
@@ -139,16 +139,16 @@ svg {
 }
 
 .pict-1 {
-    background-image: url(/assets/iot.webp);
+    background-image: url(assets/iot.webp);
 }
 .pict-2 {
-    background-image: url(/assets/semantic.png);
+    background-image: url(assets/semantic.png);
 }
 .pict-3 {
-    background-image: url(/assets/bootstrap-vs-tailwind.webp);
+    background-image: url(assets/bootstrap-vs-tailwind.webp);
 }
 .pict-4 {
-    background-image: url(/assets/threatsofai.jpeg);
+    background-image: url(assets/threatsofai.jpeg);
 }
 
 .card h2, .card p {
